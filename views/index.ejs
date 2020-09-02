@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Meta-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60" >
+    <meta name="description" content="Instagrammable Daily Bible Verse">
+    <meta name="keywords" content="bible, verse, instagrammable, instagram, bibleverse">
+    <meta name="author" content="Travis Cho">
+    <meta property="og:url" content="http://thedayverse.com">
+    <meta property="og:title" content="Daily Verse">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://thedayverse.com/static/preview.png">
+    <meta property="og:description" content="Bible Verse of the Day">
+    <!--Favicon-->
+    <link rel="icon" href="/images/favicon.svg"/>
+    <link rel="shortcut icon" href="/images/favicon.svg"/>
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/dc00b3b728.js" crossorigin="anonymous"></script>
+    <!--CSS-->
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <title><%= title %></title>
+    <script data-ad-client="ca-pub-7173220305238346" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
+<body onload="GetClock(); setInterval(GetClock,1000);">
+    <nav class="navbar navbar-expand-sm sticky-top text-center">
+        <a href="/" class="navbar-brand">
+            <img id="logo" alt="Logo" width="30" height="30" src="/images/logo.svg">
+        </a> 
+        <ul class="navbar-nav ml-auto">
+        </ul>
+        <ul class="icons">
+            <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=SK9SQQ6V623EA&currency_code=USD&source=url" target="_blank" class="fab fa-paypal icon"></a></li>
+            <li><a href="https://www.github.com/chotravis87" target="_blank" class="fab fa-github icon"></a></li>
+            <li><a href="https://forms.gle/wBCRkEM9HcibEh8p7" target="_blank" class="fas fa-poll-h icon"></a></li>
+            <li><a href="#" onclick="switcher();" class="fas fa-lightbulb icon" id="toggler"></a></li>
+        </ul>
+    </nav>
+    <section id="banner">
+        <div class="clockbox">
+            <h2 id="time" class="text-center"></h2>
+        </div>
+        <!--Content-->
+        <div class="main">
+            <h1><%= verse %></h1>
+            <h2>- <%= book %></h2>
+        </div>
+        <!--Buttons-->
+        <div>
+            <button class="btn" style="background-color: #FCF6F5FF;"><a href="/"><i class="fas fa-calendar-day" style="color: #89ABE3FF;"></i>Today</a></button>
+            <button class="btn" style="background-color: #F95700FF;"><a href="/quotes/covid19"><i class="fas fa-head-side-mask" style="color: #00A4CCFF;"></i>COVID19</a></button>
+            <button class="btn" style="background-color: #5B84B1FF;"><a href="/quotes/love"><i class="fas fa-heart" style="color: #FC766AFF;"></i>Love</a></button>
+            <button class="btn" style="background-color: #A07855FF;"><a href="/quotes/encouraging"><i class="far fa-thumbs-up" style="color: #D4B996FF"></i>Encouraging</a></button>
+            <button class="btn" style="background-color: #101820FF"><a href="/quotes/family" style="color: white;"><i class="fas fa-home" style="color: #006B38FF"></i>Family</a></button>
+            <button class="btn" style="background-color: #F2AA4CFF;"><a href="/quotes/prayer"><i class="fas fa-pray" style="color: #101820FF"></i>Prayer</a></button>
+            <button class="btn" style="background-color: #213970;"><a href="/testimony" style="color: white;"><i class="fas fa-file-alt" style="color: #210070"></i>Testimony</a></button>
+        </div>
+        <!-- randomBible -->
+        <div class="">
+            <ins class="adsbygoogle"
+            style=""
+            data-ad-client="ca-pub-7173220305238346"
+            data-ad-slot="7612463842"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        </div>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </section>
+    <script src="/javascripts/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

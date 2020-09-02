@@ -1,0 +1,140 @@
+body {
+    background-color: white;
+    color: black;
+    transition: background-color 0.2s linear;
+}		 
+
+body.dark-mode {
+    background-color: #282b34;
+    color: white;
+}
+
+#logo {
+    transition: filter 0.2s linear;
+}
+
+#logo.dark-mode {
+    filter: invert(100%);
+}
+
+.toggler-container {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+    position: relative;
+    font-size: 1.5em;
+}
+
+#banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.clockbox {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+div {
+    display: block;
+}
+
+.main {
+
+}
+
+h1, h2 {
+    font-family: 'Song Myung', serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 5vh;
+}
+
+h2 {
+    font-size: 2.5vh;
+}
+
+/*Adsense*/
+
+
+/*Buttons*/
+
+button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.3vw;
+    margin: 5px 5px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+a {
+    font-family: "Courier New", Courier;
+    color: black;
+}
+
+i {
+    padding-right: 5px;
+}
+
+/* FOOTER (Disabled)*/
+/*
+#footer {
+    color: black;
+    text-align: center;
+    height: 10vh;
+}
+*/
+
+.icons {
+    list-style-type: none;
+    margin: 0;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    text-align: center;
+}
+
+.icons li {
+    display: inline-block;
+    margin-left: 0.7em;
+    margin-right: 0.7em;
+}
+
+.icons a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+}
+
+.icon {
+    text-decoration: none;
+    font-size: 1.5em;
+    color: black;
+    transition: color linear 0.2s;
+}
+
+.icon.dark-mode {
+    color: white;
+}
+
+@media screen and (max-width: 480px) {
+    #footer .copyright li {
+        border: 0;
+        display: block;
+        line-height: 1.65em;
+        margin: 0;
+        padding: 0.5em 0;
+    }
+}
