@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/chotravis87/randBibleQuote">
-    <img src="static/home/img/logo.svg" alt="Logo" width="80" height="80">
+    <img src="/public/images/logo.svg" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">The Day Verse</h3>
