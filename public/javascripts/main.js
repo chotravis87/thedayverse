@@ -9,8 +9,16 @@ let theme = "light";
 var currentTheme = localStorage.getItem("theme");
 
 //Date
-var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+if(document.documentElement.lang=="ko")
+{
+    var tday=["일요일", "월요일", "화요일", "수요일", "목요일", "금요일", "토요일"];
+    var tmonth=["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"];
+}
+else
+{
+    var tday=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var tmonth=["January","February","March","April","May","June","July","August","September","October","November","December"];
+}
 
 function light_mode() {
     toggler.classList.remove("far");
@@ -68,10 +76,14 @@ function GetClock(){
     else if(nhour==12){ap=" PM";}
     else if(nhour>12){ap=" PM";nhour-=12;}
 
+    if(document.documentElement.lang == 'ko') {if(ap == " AM") ap = "오전 "; else ap = "오후 ";}
+
     if(nmin<=9) nmin="0"+nmin;
     if(nsec<=9) nsec="0"+nsec;
 
-    var clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+" "+nhour+":"+nmin+":"+nsec+ap+"";
+    var clocktext;
+    if(document.documentElement.lang == 'ko'){clocktext=tmonth[nmonth]+" "+ndate+"일 "+tday[nday]+" "+ap+" "+nhour+":"+nmin+":"+nsec}
+    else clocktext=""+tday[nday]+", "+tmonth[nmonth]+" "+ndate+" "+nhour+":"+nmin+":"+nsec+ap+"";
     document.getElementById('time').innerHTML=clocktext;
 }
 

@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 //Router
 var indexRouter = require('./routes/index');
+var indexRouter_kr = require('./routes/index_kr');
 
 //App
 var app = express();
@@ -15,7 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //App settings
-app.use(logger('short'));
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'files')));
 
 //Routers
 app.use('/', indexRouter);
+app.use('/kr', indexRouter_kr);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

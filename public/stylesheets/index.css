@@ -45,10 +45,6 @@ div {
     display: block;
 }
 
-.main {
-
-}
-
 h1, h2 {
     font-family: 'Song Myung', serif;
     text-align: center;
@@ -83,6 +79,11 @@ button {
 a {
     font-family: "Courier New", Courier;
     color: black;
+}
+
+a:lang(ko) {
+    font-family: 'Song Myung', serif;
+    text-align: center; 
 }
 
 i {
